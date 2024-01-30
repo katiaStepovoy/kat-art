@@ -1,6 +1,5 @@
 import {
   Stack,
-  Box,
   Typography,
   Link,
   IconButton,
@@ -114,16 +113,6 @@ const Bottom = () => {
 };
 
 export default Bottom;
-
-const BottomBase = styled(Box)`
-  && {
-    display: flex;
-    flex-direction: column;
-    padding: 4vh;
-    width: 100vw;
-    background-color: #cf8170;
-  }
-`;
 
 const BottomFont = styled(Typography).attrs({
   color: "#f5dcce",
