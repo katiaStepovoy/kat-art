@@ -43,16 +43,23 @@ function Header(props) {
             <StyledTypography isScrolled={isScrolled}>Studio</StyledTypography>
           )}
         </Stack>
-        {categories.map((category) => (
-          <MenuLink
-            key={category.name}
-            href={category.name}
-            underline="none"
-            isScrolled={isScrolled}
-          >
-            {category.text}
-          </MenuLink>
-        ))}
+        <Stack
+          direction="row"
+          alignItems="center"
+          gap={isSmallScreen ? "3rem" : "1.5rem"}
+          justifyContent="center"
+        >
+          {categories.map((category) => (
+            <MenuLink
+              key={category.name}
+              href={category.name}
+              underline="none"
+              isScrolled={isScrolled}
+            >
+              {category.text}
+            </MenuLink>
+          ))}
+        </Stack>
       </Toolbar>
     </StyledAppBar>
   );
@@ -68,9 +75,8 @@ const StyledTypography = styled(Typography).attrs({
 `;
 
 const MenuLink = styled(Link).attrs({
-  align: "left",
   variant: "body",
-  paddingLeft: "5vw",
+  //paddingLeft: "5vw",
 })`
   && {
     color: ${(props) => (props.isScrolled ? "#f5dcce" : "#d9baa9")};

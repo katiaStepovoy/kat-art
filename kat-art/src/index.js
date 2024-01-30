@@ -13,7 +13,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home />}></Route>
+          <Route index element={<Home />}></Route>
           <Route exact path="/shop" element={<Shop />}></Route>
           <Route exact path="/services" element={<Services />}></Route>
           <Route exact path="/inspiration" element={<Inspiration />}></Route>
